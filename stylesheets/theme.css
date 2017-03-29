@@ -1409,6 +1409,24 @@ input[type="checkbox"] {
   padding: 3px;
   color: transparent;
 }
+div[id^="Marketing_permission"] .eaQuestionRadioFormFieldContainer {
+  zoom: 1;
+}
+div[id^="Marketing_permission"] .eaQuestionRadioFormFieldContainer:before,
+div[id^="Marketing_permission"] .eaQuestionRadioFormFieldContainer:after {
+  content: "";
+  display: table;
+}
+div[id^="Marketing_permission"] .eaQuestionRadioFormFieldContainer:after {
+  clear: both;
+}
+div[id^="Marketing_permission"] .eaQuestionRadio {
+  margin: 0;
+}
+div[id^="Marketing_permission"] .picker-radio {
+  float: left;
+  margin-right: 1.5rem;
+}
 /* ---------- select ------------------------------------------------ */
 .eaQuestionSelectFormFieldContainer {
   position: relative;
