@@ -1455,7 +1455,7 @@ input[type="checkbox"] {
 }
 @media screen and (min-width: 560px) {
   .eaTripleSelectfield,
-  .eaTripleSelectfield .selecter {
+  .eaTripleSelectfield ~ .selecter {
     display: inline-block;
     width: 30.3%;
   }
