@@ -558,6 +558,7 @@ td {
 #page {
   width: 100%;
   margin: 0;
+  overflow: hidden;
 }
 /* ---------- header, main, footer ---------------------------------- */
 #header,
@@ -602,8 +603,8 @@ td {
   margin-left: auto;
   margin-right: auto;
 }
-.eaLeftColumnContent img:not(.inline),
-.eaRightColumnContent img:not(.inline),
+.eaLeftColumnContent img:not(.inline):not(.ui-datepicker-trigger),
+.eaRightColumnContent img:not(.inline):not(.ui-datepicker-trigger),
 .eaLeftColumnContent video,
 .eaRightColumnContent video,
 .eaLeftColumnContent .video,
@@ -614,8 +615,8 @@ td {
   margin-left: -6.82%;
 }
 @media screen and (min-width: 560px) {
-  .eaLeftColumnContent img:not(.inline),
-  .eaRightColumnContent img:not(.inline),
+  .eaLeftColumnContent img:not(.inline):not(.ui-datepicker-trigger),
+  .eaRightColumnContent img:not(.inline):not(.ui-datepicker-trigger),
   .eaLeftColumnContent video,
   .eaRightColumnContent video,
   .eaLeftColumnContent .video,
@@ -1044,6 +1045,38 @@ hr.red {
     margin-right: 0;
   }
 }
+/* ---------- lips -------------------------------------------------- */
+.lips-wrapper {
+  text-align: center;
+  padding: 1.45rem;
+}
+@media screen and (min-width: 560px) {
+  .lips-wrapper {
+    padding: 2.9rem;
+  }
+}
+@media screen and (min-width: 1150px) {
+  #page.action h1:after {
+    content: "";
+    width: 465px;
+    height: 350px;
+    background: url("../images/lips.png") no-repeat transparent;
+    display: block;
+    position: absolute;
+    right: 90%;
+    margin-top: 5rem;
+  }
+  #page.action .eaSubmitResetButtonGroup:before {
+    content: "";
+    width: 465px;
+    height: 350px;
+    background: url("../images/lips.png") no-repeat transparent;
+    display: block;
+    position: absolute;
+    left: 90%;
+    margin-top: -15rem;
+  }
+}
 /* ---------- footer ------------------------------------------------ */
 #footer {
   font-size: 0.8rem;
@@ -1391,6 +1424,7 @@ input[type="checkbox"] {
 .selecter .selecter-selected {
   background: none #ffffff;
   padding-right: 2.5rem;
+  min-height: 2.9rem;
 }
 .selecter .selecter-selected:after {
   content: '';
@@ -1418,6 +1452,13 @@ input[type="checkbox"] {
   margin-bottom: 1.45em;
   color: #060606;
   margin-bottom: 0;
+}
+@media screen and (min-width: 560px) {
+  .eaTripleSelectfield,
+  .eaTripleSelectfield .selecter {
+    display: inline-block;
+    width: 30.3%;
+  }
 }
 /* ---------- validation -------------------------------------------- */
 .eaAjaxErrorMessageContainer {

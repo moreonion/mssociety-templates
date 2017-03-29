@@ -149,6 +149,14 @@ These are social share buttons for Facebook, Twitter and email sharing:
 
 Make sure to replace the `{{placeholder parts}}` with the real urls and share texts! The name between `<span>name</span>` is what's displayed on the button itself, the `title` pops up when hovering over the button. `<i></i>` makes space for the icon, which will be inserted automatically.
 
+### small lips
+
+```html
+<div class="lips-wrapper">
+  <img class="inline" src="//moreonion.github.io/mssociety-templates/images/lips_small.png">
+</div>
+```
+
 ### submission tracking
 
 Place this snippet on the thank you page to track submissions (it's hidden so it doesn't matter if it is inside a wrapper or not):
