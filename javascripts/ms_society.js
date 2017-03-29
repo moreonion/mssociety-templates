@@ -5,6 +5,8 @@ $(document).ready(function(){
   // if it has a submit button, it's an action
   if ($('.eaSubmitButton').length > 0) {
     $('#page').addClass('action');
+  } else {
+    $('#page').addClass('not-action');
   }
 
 // ---------- fancy forms -------------------------------------------

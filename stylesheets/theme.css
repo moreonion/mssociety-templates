@@ -64,16 +64,42 @@
 }
 @media screen and (max-width: 780px) {
   .hide-on-mobile {
-    display: none;
+    display: none!important;
   }
 }
 @media screen and (min-width: 780px) {
   .hide-on-desktop {
-    display: none;
+    display: none!important;
   }
+}
+.hide-on-actions {
+  opacity: 0;
+  -webkit-animation: 0.3s linear 1s forwards fadeIn;
+  animation: 0.3s linear 1s forwards fadeIn;
 }
 #page.action .hide-on-actions {
   display: none;
+}
+#page.not-action .hide-on-actions {
+  -webkit-animation: none;
+  animation: none;
+  opacity: 1;
+}
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 /* ########## boilerplate.less ###################################### */
 /**
@@ -543,6 +569,21 @@ td {
   display: block;
   margin-left: auto;
   margin-right: auto;
+  zoom: 1;
+}
+#header:before,
+#main:before,
+#footer:before,
+#header:after,
+#main:after,
+#footer:after {
+  content: "";
+  display: table;
+}
+#header:after,
+#main:after,
+#footer:after {
+  clear: both;
 }
 #header,
 #main {
@@ -848,6 +889,7 @@ hr.red {
  * ================================================================== */
 /* ---------- header ------------------------------------------------ */
 #header .kiss-logo {
+  float: left;
   position: relative;
   z-index: 1;
   width: 40%;
@@ -873,6 +915,21 @@ hr.red {
     border-radius: 0;
     padding: 0;
     margin: 0;
+  }
+}
+#header .button {
+  float: right;
+  margin-top: 0.725rem;
+  margin-right: 2%;
+}
+@media screen and (max-width: 560px) {
+  #header .button {
+    padding: 0.725rem;
+  }
+}
+@media screen and (min-width: 780px) {
+  #header .button {
+    margin-top: 1.0875rem;
   }
 }
 /* ---------- main -------------------------------------------------- */
@@ -1128,6 +1185,7 @@ button.small {
   line-height: 1.45em;
   margin-bottom: 1.45em;
   width: auto;
+  display: inline-block;
   padding: 1.0875rem 1.6rem;
   border-radius: 0.25rem;
 }
