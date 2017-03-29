@@ -107,7 +107,9 @@ The template expects images to be prominently displayed pictures and might scale
 </div>
 ```
 
-Add as many panels as you like and wrap them all within the `panels` div.
+Add as many panels as you like and wrap them all within the `panels` div
+
+To add a link to the second page of your action, or to another EN action, use the tool for setting up internal links. We suggest setting this up on a separate piece of text, and then copying and pasting the link into the right place in the html. Otherwise, EN might make changes to the code above.
 
 
 ## action pages
