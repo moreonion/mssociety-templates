@@ -26,6 +26,14 @@ Just add `<hr>` in your content where you want the separator to appear. It's usu
 
 For smaller content you don't expect people to read (e.g. a disclaimer text), add the class `small`. If somethings needs extra attention, you can add the class `big`.
 
+### buttons
+
+You can make any link look like a button by adding the class `button`. For smaller buttons, combine with `small`:
+
+```html
+<a class="button small" href"…">A smaller button</a>
+```
+
 ### videos
 
 ```html
