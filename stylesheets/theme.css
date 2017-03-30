@@ -932,6 +932,7 @@ hr.red {
 @media screen and (min-width: 780px) {
   #header .button {
     margin-top: 1.0875rem;
+    margin-right: 0;
   }
 }
 /* ---------- main -------------------------------------------------- */
