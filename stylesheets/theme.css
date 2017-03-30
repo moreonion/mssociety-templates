@@ -890,7 +890,6 @@ hr.red {
  * ================================================================== */
 /* ---------- header ------------------------------------------------ */
 #header .kiss-logo {
-  float: left;
   position: relative;
   z-index: 1;
   width: 40%;
@@ -919,7 +918,9 @@ hr.red {
   }
 }
 #header .button {
-  float: right;
+  position: absolute;
+  top: 0;
+  right: 0;
   margin-top: 0.725rem;
   margin-right: 2%;
 }
@@ -945,10 +946,33 @@ hr.red {
 }
 #banner {
   margin-top: -15%;
+  margin-bottom: 2rem;
 }
 @media screen and (min-width: 780px) {
   #banner {
     margin-top: -7.8rem;
+  }
+}
+@media screen and (max-width: 560px) {
+  #banner.left-on-mobile,
+  #banner.middle-on-mobile,
+  #banner.right-on-mobile {
+    overflow: hidden;
+  }
+  #banner.left-on-mobile img,
+  #banner.middle-on-mobile img,
+  #banner.right-on-mobile img {
+    width: 200%;
+    max-width: none;
+  }
+  #banner.left-on-mobile img {
+    margin-left: -15%;
+  }
+  #banner.middle-on-mobile img {
+    margin-left: -50%;
+  }
+  #banner.right-on-mobile img {
+    margin-left: -85%;
   }
 }
 .one-of-two {
@@ -1026,6 +1050,7 @@ hr.red {
   }
 }
 .panel .button.small {
+  width: 100%;
   margin-bottom: 0;
   background-image: none;
   border-top-left-radius: 0;
@@ -1066,7 +1091,7 @@ hr.red {
     right: 90%;
     margin-top: 5rem;
   }
-  #page.action .eaSubmitResetButtonGroup:before {
+  #page.action .submitbutton:before {
     content: "";
     width: 465px;
     height: 350px;
@@ -1074,7 +1099,7 @@ hr.red {
     display: block;
     position: absolute;
     left: 90%;
-    margin-top: -15rem;
+    margin-top: -20rem;
   }
 }
 /* ---------- footer ------------------------------------------------ */
@@ -1222,12 +1247,16 @@ button.small {
   padding: 1.0875rem 1.6rem;
   border-radius: 0.25rem;
 }
-input.eaSubmitButton {
+input.eaSubmitButton,
+.submitbutton {
   margin-top: 2.175rem;
   margin-bottom: 2.175rem;
 }
 input.eaResetButton,
 .eaResetButton {
+  display: none;
+}
+input.eaSubmitButton {
   display: none;
 }
 /* ---------- text input -------------------------------------------- */

@@ -61,6 +61,11 @@ Put this copy box first on the page!
 </div>
 ```
 
+A single wide banner image might look too tiny on very small screens. To show only a part of the image on mobile displays, add one of the following classes to the banner:
+* `left-on-mobile`: shows the left part of the banner image
+* `middle-on-mobile`: shows the middle part of the banner image
+* `right-on-mobile`: shows the right part of the banner image
+
 ### two images next to each other
 
 To display two images next to each other on desktop size screens, wrap them each like this:
@@ -107,7 +112,7 @@ The template expects images to be prominently displayed pictures and might scale
 </div>
 ```
 
-Add as many panels as you like and wrap them all within the `panels` div
+Add as many panels as you like and wrap them all within the `panels` div.
 
 To add a link to the second page of your action, or to another EN action, use the tool for setting up internal links. We suggest setting this up on a separate piece of text, and then copying and pasting the link into the right place in the html. Otherwise, EN might make changes to the code above.
 
@@ -117,6 +122,10 @@ To add a link to the second page of your action, or to another EN action, use th
 ### copy in form
 
 For copy that is part of the form, add the class `form-content` to make it the same width as the form fields.
+
+### radios on one line
+
+Radio inputs will appear next to each other on one line when the Question name starts with "Marketing permissions".
 
 
 ## thank you pages
