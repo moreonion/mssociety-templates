@@ -626,6 +626,16 @@ td {
     margin-right: auto;
   }
 }
+@media screen and (max-width: 560px) {
+  .eaLeftColumnContent .video,
+  .eaRightColumnContent .video,
+  .eaLeftColumnContent .youtube,
+  .eaRightColumnContent .youtube,
+  .eaLeftColumnContent .vimeo,
+  .eaRightColumnContent .vimeo {
+    padding-bottom: 63.9225%;
+  }
+}
 /* ---------- form fields, buttons ---------------------------------- */
 .form-content,
 .eaFormField,
